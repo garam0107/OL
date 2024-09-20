@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>CREATE PAGE</h1>
+  {% comment %} 
+ app별로, urls.py를 따로 만들어서,
+ url별로, 새로운 path 함수를 따로 적어서 관리
+
+ app_name:url_name
+
+  {% endcomment %}
+  <form action="{% url "todos:main" %}" method = "GET">
+    <input type="text" name = "work">
+    <input type="submit" value="제출">
+  </form>
+{% endblock content %}
+
